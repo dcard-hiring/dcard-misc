@@ -29,9 +29,14 @@
     var creative = document.getElementById("ad-creative");
     var meta = meta(window.location.search.substr(1));
     if (!meta) return;
+    meta = {
+      id: 'asus-0907-0909-UatC40',
+      link: 'http://goo.gl/UatC40',
+      img: 'http://i.imgur.com/iYDg4Hl.jpg'
+    };
     container.setAttribute("style", "background: #" + (meta.bg || '000'));
     creative.setAttribute("src", meta.img);
-    link.setAttribute("href", meta.link || "http://goo.gl/EBxjxP");
+    link.setAttribute("href", meta.link);
     link.addEventListener("click", onclick);
     amplitude.getInstance().init("9e03b5aeb22ae5524ede65eaf06dbb88");
     oninpression();
